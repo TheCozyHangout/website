@@ -1,0 +1,7 @@
+**/node_modules
+**/package-lock.json
+**/.env
+**/dist
+
+# Ignores all temporarry files marked as (exampleName.temp.ext or aes256.temp.key)
+**/*.temp.*
