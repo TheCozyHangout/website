@@ -2,6 +2,7 @@
 **/package-lock.json
 **/.env
 **/dist
+**/*.exe
 
 # Ignores all temporarry files marked as (exampleName.temp.ext or aes256.temp.key)
 **/*.temp.*
