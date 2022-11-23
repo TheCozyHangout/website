@@ -13,10 +13,7 @@ func (adapter *MySQLAdapter) GetCardByID(id string) (domain.Card, error) {
 
 	result, err := adapter.client.Queryx(str)
 
-	fmt.Println(str)
-
 	if err != nil {
-		fmt.Printf("one %v\n", err)
 		return domain.Card{}, err
 	}
 
@@ -25,7 +22,6 @@ func (adapter *MySQLAdapter) GetCardByID(id string) (domain.Card, error) {
 		err := result.StructScan(&card)
 
 		if err != nil {
-			fmt.Printf("%v\n", err)
 			return domain.Card{}, err
 		}
 	}

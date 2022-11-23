@@ -18,14 +18,13 @@ func NewMySQLAdapter() (*MySQLAdapter, error) {
 	client, err := sqlx.Connect("mysql", str)
 
 	if err != nil {
-		fmt.Println("Failed to connect to MySQL")
 		return nil, err
 	}
 
 	pingErr := client.Ping()
 
 	if pingErr != nil {
-		fmt.Println("cancer")
+		return nil, err
 	}
 
 	return &MySQLAdapter{client: client}, nil
